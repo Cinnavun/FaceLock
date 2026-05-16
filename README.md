@@ -1,6 +1,6 @@
 # FaceLock
 
-This is an experimental fork of the original repository
+This is an experimental fork of the original repository - https://github.com/taco-group/FaceLock
 
 [![arXiv](https://img.shields.io/badge/arXiv-2411.16832-b31b1b.svg)](https://arxiv.org/abs/2411.16832) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
