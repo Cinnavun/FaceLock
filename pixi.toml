@@ -4,14 +4,24 @@ channels = ["conda-forge", "pytorch", "nvidia", "main"]
 name = "FaceLock"
 platforms = ["win-64", "linux-64"]
 version = "0.1.0"
-[system-requirements]
-cuda = "12.8"
+
+[environments]
+default = { features = ["windows", "cuda12"] }
+cuda12 = { features = ["windows", "cuda12"] }
+cuda13 = { features = ["windows", "cuda13"] }
+linux = { features = ["linux"] }
 
 [tasks]
 build = "make build"
 
-[target.win-64.dependencies]
-python = ">=3.10"
+[feature.cuda12.system-requirements]
+cuda = "12.8"
+
+[feature.cuda13.system-requirements]
+cuda = "13.2"
+
+[feature.windows.target.win-64.dependencies]
+python = "3.12.*"
 pytorch = ">=2.3"
 pytorch-cuda = "*"
 torchvision = ">=0.18.0"
@@ -30,7 +40,7 @@ pyyaml = "6.0.1.*"
 tqdm = "4.66.4.*"
 safetensors = "0.4.3.*"
 
-[target.win-64.pypi-dependencies]
+[feature.windows.target.win-64.pypi-dependencies]
 antlr4-python3-runtime = "==4.9.3"
 bleach = "==6.1.0"
 diffusers = "==0.31.0"
@@ -55,7 +65,7 @@ torchmetrics = "==1.4.0.post0"
 webencodings = "==0.5.1"
 
 
-[target.linux-64.dependencies]
+[feature.linux.target.linux-64.dependencies]
 python = ">=3.10"
 cudnn = ">=8.9.7"
 _libgcc_mutex = "*"
@@ -321,7 +331,7 @@ zeromq = "4.3.5.*"
 zipp = "3.19.2.*"
 zstandard = "0.22.0.*"
 
-[target.linux-64.pypi-dependencies]
+[feature.linux.target.linux-64.pypi-dependencies]
 torchvision = ">=0.18.0"
 antlr4-python3-runtime = "==4.9.3"
 bleach = "==6.1.0"
