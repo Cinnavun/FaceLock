@@ -1,5 +1,7 @@
 # FaceLock
 
+This is an experimental fork of the original repository - https://github.com/taco-group/FaceLock
+
 [![arXiv](https://img.shields.io/badge/arXiv-2411.16832-b31b1b.svg)](https://arxiv.org/abs/2411.16832) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 <table align="center">
@@ -12,7 +14,7 @@
   </tr>
 </table>
 
-Welcome to the official repository for the paper, [Edit Away and My Face Will not Stay: Personal Biometric Defense against Malicious Generative Editing](https://arxiv.org/abs/2411.16832).
+Welcome to the unofficial repository for the paper, [Edit Away and My Face Will not Stay: Personal Biometric Defense against Malicious Generative Editing](https://arxiv.org/abs/2411.16832).
 
 
 ## Abstract
